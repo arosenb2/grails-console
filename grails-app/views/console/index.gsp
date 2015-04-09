@@ -7,6 +7,7 @@
   <title>Grails Debug Console</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <link rel="icon" type="image/png" href="${resource(dir: 'src/img', file: 'grails.logo.png', plugin: 'console')}" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <g:render template="css" />
   
   <meta name="layout" content="${grailsApplication.config.grails.plugin.console.layout ?: 'console-plugin-layout'}"/>

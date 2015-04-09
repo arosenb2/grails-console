@@ -44,7 +44,7 @@ module.exports = (grunt) ->
       ]
       css: [
         "#{vendorDir}/bootstrap/css/bootstrap.min.css"
-        "#{vendorDir}/font-awesome-4.0.3/css/font-awesome.css"
+#        "#{vendorDir}/font-awesome-4.0.3/css/font-awesome.css"
         "#{vendorDir}/codemirror-4.6/lib/codemirror.css"
         "#{vendorDir}/codemirror-4.6/theme/lesser-dark.css"
         "#{vendorDir}/jquery-layout/css/jquery.layout.css"
@@ -151,10 +151,10 @@ module.exports = (grunt) ->
       css = grunt.file.expand(vendor.css).concat grunt.file.expand(app.css.release)
 
     scriptTags = js.map (file) ->
-      """<script type="text/javascript" src="${resource(file: '#{file.replace staticDir, ''}', plugin: 'console')}" ></script>"""
+      """<script type="text/javascript" src="${resource(file: '#{file.replace staticDir, ''}')}" ></script>"""
 
     linkTags = css.map (file) ->
-      """<link rel="stylesheet" media="screen" href="${resource(file: '#{file.replace staticDir, ''}', plugin: 'console')}" />"""
+      """<link rel="stylesheet" media="screen" href="${resource(file: '#{file.replace staticDir, ''}')}" />"""
 
     grunt.file.write 'grails-app/views/console/_js.gsp', scriptTags.join '\n'
     grunt.file.write 'grails-app/views/console/_css.gsp', linkTags.join '\n'
