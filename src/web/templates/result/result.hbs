@@ -1,0 +1,26 @@
+{{#if loading}}
+    <div class="loading"><i class="fa fa-refresh fa-spin"></i></div>
+{{else}}
+    {{#if input}}
+      <div class="input">
+          {{#each inputLines}}
+              <div>
+                <div class="gutter">{{../inputGutter}}</div><div class="text">{{this}}</div>
+              </div>
+          {{/each}}
+      </div>
+    {{/if}}
+    {{#if output}}
+      <div class="output"><div class="text">{{output}}</div></div>
+    {{/if}}
+    <div class="result">
+        {{#if resultTree}}
+            <div><div class="gutter">≫</div><div class="result-text">{{> tree resultTree}}</div></div>
+        {{else}}
+            <div class="single-line-result"><div class="gutter">≫</div><div class="result-text text">{{result}}</div></div>
+        {{/if}}
+        {{#if totalTime}}
+            <span class="pull-right">[{{totalTime}} ms]</span>
+        {{/if}}
+    </div>
+{{/if}}

@@ -1,0 +1,46 @@
+<div class="btn-toolbar">
+    <button class="clear btn btn-sm btn-default" title="Clear (Esc)"><i class="fa fa-eraser fa-lg"></i></button>
+
+    <!--<div class="btn-group pull-right">-->
+        <!--<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">-->
+            <!--<span>Session Off</span>-->
+            <!--<span class="caret"></span>-->
+            <!--<span class="sr-only">Toggle Dropdown</span>-->
+        <!--</button>-->
+        <!--<ul class="dropdown-menu" role="menu">-->
+            <!--<li><a href="#" class="save-as">Session On</a></li>-->
+            <!--<li><a href="#" class="save-as">Session Off</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+</div>
+
+<div class="script-result-section">
+    <div class="floatable">
+        <div class="inner">
+            <div class="script-result welcome">
+                <div class="result wrappable"><div>Welcome to the Grails Debug Console!
+
+- Execute Groovy code from the editor or inline below.
+- Save/load scripts via the editor toolbar and storage pane.
+- More options available in the settings dropdown.
+
+Implicit variables:
+{{#each implicitVars}}
+    {{~this}}
+{{/each}}
+
+Keyboard shortcuts:
+{{#each shortcuts}}
+    {{~this}}
+{{/each}}
+</div></div>
+            </div>
+        </div>
+        <form class="prompt-form">
+            <div class="prompt-inner">
+                <div class="gutter">&gt;</div>
+                <div class="text"><textarea class="prompt form-control" type="text"></textarea></div>
+            </div>
+        </form>
+    </div>
+</div>

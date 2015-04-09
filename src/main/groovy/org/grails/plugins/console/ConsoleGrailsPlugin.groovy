@@ -7,11 +7,7 @@ import java.lang.reflect.Method
 class ConsoleGrailsPlugin extends Plugin {
 
    // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.0.0.M2 > *"
-    // resources that are excluded from plugin packaging
-    def pluginExcludes = [
-        "grails-app/views/error.gsp"
-    ]
+    def grailsVersion = "3.0.0 > *"
 
     String title = 'Console Plugin'
     String description = 'A web-based Groovy console for interactive runtime application management and debugging'
@@ -27,8 +23,8 @@ class ConsoleGrailsPlugin extends Plugin {
     def issueManagement = [system: 'github', url: 'https://github.com/sheehan/grails-console/issues']
     def scm = [url: 'https://github.com/sheehan/grails-console']
 
-    def doWithApplicationContext = { appCtx ->
-        application.config.grails.assets.plugin.'console'.excludes = ['**/*']
+    void doWithApplicationContext() {
+        config.grails.assets.plugin.'console'.excludes = ['**/*']
 
         JSON.createNamedConfig('console') {
             it.registerObjectMarshaller(Class) { Class clazz ->
