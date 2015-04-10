@@ -44,7 +44,7 @@ module.exports = (grunt) ->
       ]
       css: [
         "#{vendorDir}/bootstrap/css/bootstrap.min.css"
-#        "#{vendorDir}/font-awesome-4.0.3/css/font-awesome.css"
+        "#{vendorDir}/font-awesome-4.0.3/css/font-awesome.css"
         "#{vendorDir}/codemirror-4.6/lib/codemirror.css"
         "#{vendorDir}/codemirror-4.6/theme/lesser-dark.css"
         "#{vendorDir}/jquery-layout/css/jquery.layout.css"

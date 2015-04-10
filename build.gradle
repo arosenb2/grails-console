@@ -16,7 +16,7 @@ plugins {
     id "com.jfrog.bintray" version "1.1"
 }
 
-version "2.0.0"
+version "2.0.1"
 group "org.grails.plugins"
 
 apply plugin: 'maven-publish'
@@ -72,6 +72,12 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
+
+task repairPublicFiles(type: Copy) { // https://github.com/grails/grails-core/issues/629
+    from 'src/main/resources/static'
+    into 'build/resources/main/static'
+}
+processResources.finalizedBy repairPublicFiles
 
 bintray {
     pkg {
